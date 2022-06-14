@@ -25,7 +25,7 @@
     {{ button("Button with name and value", type="button", name="action", value="delete") }}
 
     <h1 class="mt-5">Cards</h1>
-    {% call(opts) card(heading_level="3", heading=heading, footer="This is the footer!") %}
+    {% call(opts) card(heading_level="3", footer="This is the footer!") %}
       {% set opts.heading %}
         <span lang="de">Großartige</span> Card with {{ badge("Badge", type="danger") }}
       {% endset %}
@@ -34,7 +34,7 @@
 
     <hr />
 
-    {% call(_opts) card(heading_level="3", heading="Another Card with a Link as Header", href="#foo") %}
+    {% call(opts) card(heading_level="3", heading="Another Card with a Link as Header", href="#foo") %}
         Content baby!
     {% endcall %}
 
